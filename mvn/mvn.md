@@ -1,4 +1,3 @@
 # Run
 
-mvn dependency:sources
-mvn dependency:resolve -Dclassifier=javadoc
+mvn dependency:sources && mvn dependency:resolve -Dclassifier=javadoc
