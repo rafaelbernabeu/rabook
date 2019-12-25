@@ -16,11 +16,12 @@ info registers                  -> ver os registradores
 
 x/s 0x000000                    -> print string
 x/wx $esp
-
+x/wx $eps+0x5c
 
 c                               -> continue
 r                               -> run 
 r < /file                       -> redirect file contents to the stdin
+si                              -> step single instruction
 
 x functionname                  -> examine function
 p functionname                  -> print function
