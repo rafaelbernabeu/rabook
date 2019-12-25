@@ -1,3 +1,4 @@
+```
 gdb /path/program
 
 set disassembly-flavor intel
@@ -29,3 +30,5 @@ define hook-stop                -> print the registers, the stack and the next t
 >x/24wx $esp
 >x/2i $eip
 >end
+
+```
