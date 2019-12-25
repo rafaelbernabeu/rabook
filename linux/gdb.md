@@ -24,7 +24,7 @@ r < /file                       -> redirect file contents to the stdin
 x functionname                  -> examine function
 p functionname                  -> print function
 
-define hook-stop
+define hook-stop                -> print the registers, the stack and the next two instructions 
 >info registers
 >x/24wx $esp
 >x/2i $eip
