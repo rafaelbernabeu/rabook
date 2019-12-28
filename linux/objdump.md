@@ -1,5 +1,7 @@
 ```
 
 objdump -x
+objdump -t
+
 
 ```
