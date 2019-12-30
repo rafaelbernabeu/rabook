@@ -16,9 +16,11 @@ del                             -> remove all breakpoints
 
 info registers                  -> ver os registradores
 
-x/s 0x000000                    -> print string
-x/wx $esp
-x/wx $eps+0x5c
+x/wx $esp                       -> print word (32-bit value) as hex
+x/gx $esp+0x5c                  -> print giant word (64-bit value) as hex
+x/2i $eip                       -> print two next values as instructions
+x/a $esp                        -> print as address
+x/s $eip                        -> print as string
 
 c                               -> continue
 r                               -> run 
@@ -35,3 +37,5 @@ define hook-stop                -> print the registers, the stack and the next t
 >end
 
 ```
+
+See [gdb-reference](http://visualgdb.com/gdbreference/commands/)
