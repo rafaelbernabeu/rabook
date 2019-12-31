@@ -3,6 +3,6 @@
 ```
 
 objdump -x
-objdump -t
+objdump -t              -> find all symbols
 
 ```
