@@ -10,3 +10,5 @@ Check intel gpu usage:
 # apt-get install intel-gpu-tools 
 # intel_gpu_top
 ```
+
+https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/
