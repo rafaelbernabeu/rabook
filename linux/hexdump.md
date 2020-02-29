@@ -1,7 +1,0 @@
-# hexdump
-
-```
-
-hexdump -C
-
-```
