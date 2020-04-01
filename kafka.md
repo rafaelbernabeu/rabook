@@ -23,3 +23,10 @@
 ```
 > bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
 ```
+
+
+```
+> echo stat | nc zookeeper 2181
+> echo srvr | nc zookeeper 2181
+```
+
