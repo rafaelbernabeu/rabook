@@ -12,3 +12,10 @@ Dependency Tree
 ```
 mvn dependency:tree -Dverbose
 ```
+
+
+Debug on terminal
+
+```
+mvn test -Dmaven.surefire.debug
+```
