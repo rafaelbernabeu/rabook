@@ -2,6 +2,8 @@
 
 
 [Como criar um instalador inicializável no macOS](https://support.apple.com/pt-br/HT201372)
+
+
 [Como apagar o disco rígido e reinstalar o macOS](https://support.apple.com/pt-br/HT208496)
 
 
