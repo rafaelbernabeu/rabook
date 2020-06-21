@@ -17,6 +17,10 @@
 ```
 
 ```
+> bin/kafka-topics.sh --bootstrap-server localhost:9092 --alter --topic my_topic_name --partitions 40
+```
+
+```
 > bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
 ```
 
