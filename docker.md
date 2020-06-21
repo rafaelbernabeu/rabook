@@ -1,6 +1,6 @@
 # Docker overview
 
-docker cli -> dockerd -> containerd -> runc -> unshare
+docker-cli -> dockerd -> containerd -> runc -> unshare
 
 A namespace wraps a global system resource in an abstraction that makes it appear to the processes within the namespace that they have their own isolated instance of the global resource.
 Changes to the global resource are visible to other processes that are members of the namespace, but are invisible to other processes. One use of namespaces is to implement containers.
@@ -20,6 +20,7 @@ The following types of namespaces can be created with unshare:
 - user namespace
 - time namespace
 
+```
 $ man 2 unshare
 $ man 7 namespaces 
 $ man 7 cgroups
@@ -32,3 +33,4 @@ $ man 7 pid_namespaces
 $ man 7 cgroup_namespaces
 $ man 7 user_namespaces
 $ man 7 time_namespaces
+```
