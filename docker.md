@@ -34,3 +34,5 @@ $ man 7 cgroup_namespaces
 $ man 7 user_namespaces
 $ man 7 time_namespaces
 ```
+
+https://lwn.net/Articles/531114/
