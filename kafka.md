@@ -35,3 +35,7 @@
 > echo srvr | nc zookeeper 2181
 ```
 
+
+https://github.com/confluentinc/confluent-kafka-python/issues/137
+https://github.com/edenhill/librdkafka/blob/master/INTRODUCTION.md#high-throughput
+https://github.com/edenhill/librdkafka/wiki/FAQ#why-is-there-no-sync-produce-interface
