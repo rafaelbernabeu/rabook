@@ -1,0 +1,7 @@
+# hexdump
+
+```
+
+hexdump -C
+
+```

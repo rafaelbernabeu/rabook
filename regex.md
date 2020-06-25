@@ -1,5 +1,15 @@
 # Regex
 
+Find duplicate lines:
+```
+^(.*)$\n\1
+```
+
+Limit the Length of Text
+```
+^[A-Z]{1,10}$
+```
+
 A compiled representation of a regular expression.
 A regular expression, specified as a string, must first be compiled into an instance of this class. The resulting pattern can then be used to create a Matcher object that can match arbitrary character sequences against the regular expression. All of the state involved in performing a match resides in the matcher, so many matchers can share the same pattern.
 
