@@ -7,7 +7,7 @@ $ :(){ :|:& };:
 
 Man pages:
 
-``
+```
 $ man man
 
 1: Executable programs or shell commands; man-pages includes a very few Section 1 pages that document programs supplied by the GNU C library.
