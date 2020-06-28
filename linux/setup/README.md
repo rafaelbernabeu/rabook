@@ -6,6 +6,7 @@ APT
 apt install wireshark
 apt install gparted
 apt install etherape
+apt install nmap
 
 ```
 
