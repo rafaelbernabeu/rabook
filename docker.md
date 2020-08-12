@@ -36,3 +36,21 @@ $ man 7 time_namespaces
 ```
 
 https://lwn.net/Articles/531114/
+
+
+# Docker CLI
+
+Share docker socket:
+```
+$ docker run ... -v /var/run/docker.sock:/var/run/docker.sock ...
+```
+
+Share X11 socket
+```
+$ docker run ... -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix ...
+```
+
+Get audio:
+```
+$ docker run ... --device=/dev/snd:/dev/snd ...
+```
