@@ -12,6 +12,3 @@ kc get pods ...
 kc get all ...
 kc exec -it ... /bin/sh 
 ```
-
-```
-```
