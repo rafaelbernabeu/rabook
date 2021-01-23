@@ -40,6 +40,7 @@ config file: `~/.zshrc`
 
 ```
 plugins=(
+	fzf
 	git
 	dnf
 	helm
