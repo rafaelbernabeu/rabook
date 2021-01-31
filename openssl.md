@@ -15,3 +15,8 @@ openssl command for converting private key
 ```
 openssl pkcs8 -topk8 -nocrypt -inform pem -in rsaPrivateKey.pem -outform pem -out privateKey.pem
 ```
+
+Check server certificate
+```
+openssl s_client -connect www.godaddy.com:443
+```
