@@ -1,19 +1,41 @@
 # OPENSSL
 
-Generating Keys with OpenSSL
-It is also possible to generate a public and private key pair using the OpenSSL command line tool.
-
+Generating a Private Key
 ```
-openssl commands for generating keys
-openssl genrsa -out rsaPrivateKey.pem 2048
-openssl rsa -pubout -in rsaPrivateKey.pem -out publicKey.pem
+openssl genrsa -out privateKey.pem 4096
 ```
 
-An additional step is needed for generating the private key for converting it into the PKCS#8 format.
 
-openssl command for converting private key
+Extract the Public Key
 ```
-openssl pkcs8 -topk8 -nocrypt -inform pem -in rsaPrivateKey.pem -outform pem -out privateKey.pem
+openssl rsa -in privateKey.pem -out publicKey.pem -pubout
+
+openssl pkey -in privateKey.pem -out publicKey.pem -pubout
+```
+
+Generating a Private Key and Self-Signed Certificate
+```
+openssl req \
+    -newkey rsa:2048 -nodes -keyout privateKey.key \
+    -x509 -days 365 -out certificate.crt
+```
+
+Associate a Private Key with a Self-Signed Certificate
+```
+openssl req \
+    -key privateKey.key \
+    -new -x509 -days 365 \
+    -out certificate.crt
+```
+
+For detailed information about how your key was generated:
+```
+openssl rsa -in privateKey.pem -text -noout
+```
+
+Command for converting the it into the PKCS#8 formatprivate key
+```
+openssl pkcs8 -topk8 -nocrypt -inform pem -in privateKey.pem -outform pem -out privateKey.pem
 ```
 
 Check server certificate
