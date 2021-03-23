@@ -16,14 +16,14 @@ openssl pkey -in privateKey.pem -out publicKey.pem -pubout
 Generating a Private Key and Self-Signed Certificate
 ```
 openssl req \
-    -newkey rsa:2048 -nodes -keyout privateKey.key \
+    -newkey rsa:2048 -nodes -keyout privateKey.pem \
     -x509 -days 365 -out certificate.crt
 ```
 
 Associate a Private Key with a Self-Signed Certificate
 ```
 openssl req \
-    -key privateKey.key \
+    -key privateKey.pem \
     -new -x509 -days 365 \
     -out certificate.crt
 ```
