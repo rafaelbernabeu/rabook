@@ -31,7 +31,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/z
 
 - fzf
 ```
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+git clone --depth 1 https://github.com/junegunn/fzf.git $ZSH_CUSTOM/plugins/fzf && $ZSH_CUSTOM/plugins/fzf/install
+export FZF_BASE=/home/rab/.oh-my-zsh/custom/plugins/fzf
 ```
 
 # Set the plugins
