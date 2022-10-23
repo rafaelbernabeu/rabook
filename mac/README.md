@@ -33,3 +33,14 @@ Enable Key Repetition on Mac
 defaults write -g ApplePressAndHoldEnabled -bool false
 ```
 
+Sudo with Touch ID
+Edit /etc/pam.d/sudo and add the following line to the top:
+```
+auth sufficient pam_tid.so
+```
+
+
+List Services
+```
+launchctl list
+```

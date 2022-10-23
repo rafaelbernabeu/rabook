@@ -21,7 +21,7 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/maste
 
 - zsh-syntax-highlighting
 ```
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting 
 ```
 
 - zsh-autosuggestions
@@ -34,6 +34,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/z
 git clone --depth 1 https://github.com/junegunn/fzf.git $ZSH_CUSTOM/plugins/fzf && $ZSH_CUSTOM/plugins/fzf/install
 export FZF_BASE=/home/rab/.oh-my-zsh/custom/plugins/fzf
 ```
+
+Put the export line before the plugins.
 
 # Set the plugins
 

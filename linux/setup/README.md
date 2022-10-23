@@ -7,6 +7,8 @@ apt install gparted
 apt install etherape
 apt install nmap
 apt install nmon
+apt install avahi-daemon
+
 
 ```
 
