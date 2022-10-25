@@ -39,8 +39,12 @@ Edit /etc/pam.d/sudo and add the following line to the top:
 auth sufficient pam_tid.so
 ```
 
-
 List Services
 ```
 launchctl list
+```
+
+Reset Launchpad
+```
+defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
 ```
