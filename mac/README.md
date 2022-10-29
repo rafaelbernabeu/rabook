@@ -1,3 +1,34 @@
+# MacOS
+
+Enable Key Repetition on Mac
+```
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
+Sudo with Touch ID \
+Edit /etc/pam.d/sudo and add the following line to the top:
+```
+auth sufficient pam_tid.so
+```
+
+List Services
+```
+launchctl list
+```
+
+Reset Launchpad
+```
+defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
+```
+
+List of Icons
+```
+/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources
+```
+
+
+
+## Downloads
 [Apple Downloads](https://support.apple.com/downloads)
 
 
@@ -25,26 +56,4 @@ sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createins
 [El Capitan](https://support.apple.com/pt-br/HT206886)
 ```
 sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume --applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app
-```
-
-
-Enable Key Repetition on Mac
-```
-defaults write -g ApplePressAndHoldEnabled -bool false
-```
-
-Sudo with Touch ID
-Edit /etc/pam.d/sudo and add the following line to the top:
-```
-auth sufficient pam_tid.so
-```
-
-List Services
-```
-launchctl list
-```
-
-Reset Launchpad
-```
-defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
 ```
