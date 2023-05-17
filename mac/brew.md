@@ -10,7 +10,8 @@ bat \
 hyperfine \
 bandwhich \
 diskonaut \
-trippy
+trippy \
+gping
 ```
 
 # Procs
@@ -30,3 +31,4 @@ https://github.com/sharkdp/hyperfine
 https://github.com/imsnif/bandwhich
 https://github.com/imsnif/diskonaut
 https://github.com/fujiapple852/trippy
+https://github.com/orf/gping
