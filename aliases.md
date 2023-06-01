@@ -1,5 +1,6 @@
 # Aliases
 
+alias sudo='sudo '
 alias b='cd ..'
 alias projects='cd /Users/rafaelbernabeu/Projects'
 alias ls='exa'
@@ -13,4 +14,4 @@ alias trip='trip -G /Users/rafaelbernabeu/.geoip/GeoLite2-City_20230516/GeoLite2
 
 
 
-### Go check the file geoip.md
+## Go check the file geoip.md
