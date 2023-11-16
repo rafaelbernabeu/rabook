@@ -51,7 +51,3 @@ https://pve.proxmox.com/pve-docs/pve-admin-guide.html#qm_virtual_machines_settin
 
 ______________________________________________________________
 
-# Increment Storage
-
-lvresize -l +100%FREE /dev/pve/root
-resize2fs /dev/mapper/pve-root

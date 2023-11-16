@@ -29,3 +29,9 @@ mkfs.ext4 /dev/volgrp01/lv01
 lvcreate -T -L 100G -n data pve
 lvcreate -T -l 100%FREE -n data pve
 lvconvert --type thin-pool pve/data
+
+
+# Resize Storage
+
+lvresize -l +100%FREE /dev/pve/root
+resize2fs /dev/mapper/pve-root
