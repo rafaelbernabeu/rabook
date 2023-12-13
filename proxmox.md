@@ -51,3 +51,20 @@ https://pve.proxmox.com/pve-docs/pve-admin-guide.html#qm_virtual_machines_settin
 
 ______________________________________________________________
 
+# HandleLidSwitch
+
+nano /etc/systemd/logind.conf
+
+HandleLidSwitch=ignore
+HandleLidSwitchExternalPower=ignore
+HandleLidSwitchDocked=ignore
+
+systemctl restart systemd-logind.service
+
+# Screen Timeout
+
+nano /etc/default/grub
+GRUB_CMDLINE_LINUX="consoleblank=300"
+
+update-grub
+
