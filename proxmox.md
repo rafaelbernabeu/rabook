@@ -13,7 +13,7 @@ nano /etc/modules
 vfio
 vfio_iommu_type1
 vfio_pci
-vfio_virqfd
+vfio_virqfd #not needed if on kernel 6.2 or newer
 
 
 After changing anything modules related, you need to refresh your initramfs. On Proxmox VE this can be done by executing:
