@@ -58,7 +58,14 @@ Output:
 
 
 
-Discover up hosts
+## Discover up hosts
 ```
 nmap -sn 192.168.0.1/24
 ```
+
+## Default scripts:
+nmap -sC 192.168.0.1
+nmap --script=default
+
+
+

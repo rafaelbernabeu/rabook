@@ -14,6 +14,11 @@ trippy \
 gping
 ```
 
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
+
+
+
 # Procs
 
 mkdir -p ~/.config/procs 

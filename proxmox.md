@@ -15,6 +15,10 @@ vfio_iommu_type1
 vfio_pci
 vfio_virqfd #not needed if on kernel 6.2 or newer
 
+Blacklisting drivers
+echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf 
+echo "blacklist nvidia*" >> /etc/modprobe.d/blacklist.conf 
+
 
 After changing anything modules related, you need to refresh your initramfs. On Proxmox VE this can be done by executing:
 update-initramfs -u -k all
