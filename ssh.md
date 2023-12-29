@@ -22,3 +22,8 @@ ssh -R 7000:127.0.0.1:3000 -N -f root@137.184.74 -p 80
 ssh socks proxy:
 ssh -D 9050 -N ubuntu@18.228.196.155
 proxychains curl ifconfig.me
+
+
+
+https://serveo.net
+https://ngrok.com
