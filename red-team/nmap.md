@@ -66,3 +66,7 @@ nmap -sn 192.168.0.1/24
 ## Default scripts:
 nmap -sC 192.168.0.1
 nmap --script=default
+
+
+
+nmap -sC -sV -O -p- cozyhosting.htb
