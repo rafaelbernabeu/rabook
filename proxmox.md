@@ -72,3 +72,7 @@ GRUB_CMDLINE_LINUX="consoleblank=300"
 
 update-grub
 
+# Import VM Disks
+
+qemu-img convert -f vhdx image.vhdx -O raw image.raw
+qm importdisk 101 image.raw local-lvm
