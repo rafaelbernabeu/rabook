@@ -25,6 +25,10 @@ Agora no container LXC:
 
 nano /etc/pve/lxc/102.conf
 ```
+mp0: /mnt/truenas/Downloads,mp=/mnt/Downloads
+mp1: /mnt/truenas/Movies,mp=/mnt/Movies
+mp2: /mnt/truenas/TV Shows,mp=/mnt/TV Shows
+
 lxc.cgroup.devices.allow: c 195:* rwm
 lxc.cgroup.devices.allow: c 235:* rwm
 lxc.mount.entry: /dev/nvidia0 dev/nvidia0 none bind,optional,create=file
@@ -36,14 +40,18 @@ lxc.mount.entry: /dev/nvidia-uvm-tools dev/nvidia-uvm-tools none bind,optional,c
 
 - Instale o Driver da NVIDIA no GUEST
 - Instale o Driver CUDA no GUEST
-
-- Verifique com o comando
-docker run --rm -it --gpus=all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark
-
-
-- Docker-compose precisa do python3-distutils-extra
+- Instale o Cuda Container Toolkit
 - Configurar o Docker para uso da GPU
 ```
 nvidia-ctk runtime configure --runtime=docker
 nvidia-ctk config --set nvidia-container-cli.no-cgroups --in-place
 ```
+- Reiniciar o serviço do Docker
+
+- Verifique com o comando
+docker run --rm -it --gpus=all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark
+
+
+
+OBS.:
+- Docker-compose precisa do python3-distutils-extra
